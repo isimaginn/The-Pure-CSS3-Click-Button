@@ -1,0 +1,1371 @@
+/*here is the css from page index.html*/
+
+/*to learn how to use the pure css3 clic button please read at pages "the-button-explained" html and css contained in "your product" "learning and tools for pure css3 clic button"*/
+
+/*_____________________*/
+
+/*buttons basic code same as in page "code-of-the-pure-css-three-clic-button.css"*/
+.activator, 
+.validator{
+  z-index: -70000000;
+  opacity: 0;
+  transition-delay: 3600s;
+}
+
+.activator{
+  cursor: pointer;
+}
+
+.validator{
+  position: absolute;
+  height: 0px;
+  width: 0%;
+  bottom: 0%;
+  margin-left: 0%;
+}
+
+@keyframes flash-validate{
+  0%{
+    width: 100%;
+    height: 3000px;
+  }
+  100%{
+    width: 100%;
+    height: 3000px;
+  }
+}
+
+/**/
+
+body{
+  position: absolute;
+  height: 1000px;
+  width: 100%;
+  max-width: 100%;
+  padding: 0%;
+  margin: 0%;
+}
+
+#general{
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+  margin: 0%;
+  padding: 0%;
+  overflow: hidden;
+  transition: 0.35s 3600s;
+}
+
+#page-background{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  margin-left: 120%;
+  width: 100%;
+  height: 3000px;
+  padding: 0em;
+  background: linear-gradient( rgb(255,255,255) 4.2%, rgb(63,219,255) 4.2%, rgb(63,219,255) 21%, rgb(255,255,255) 21%);
+  z-index: -7;
+  opacity: 0;
+  transition: 0s 3600s;
+}
+
+#prevent{
+  position: absolute;
+  top: 1%;
+  color: red;
+}
+
+h1{
+  position: absolute;
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 1em;
+  font-size: 3em;
+  margin-bottom: 0em;
+  transition: 0.35s 3600s;
+}
+
+h1 span{
+  font-size: 1.4em;
+  transition: 0.35s 3600s;
+}
+
+.label{
+  width: 100%;
+  text-align: center;
+  display: block;
+  font-size: 1em;
+  transition: 0.35s 3600s;
+}
+
+.signature{
+  position: absolute;
+  top: 7em;
+  font-size: 2em;
+  margin-top: 1em;
+  text-align: left;
+  margin-left: 7%;
+  width: 52%;
+  padding: 0%;
+}
+
+#signature{
+  margin-top: 4em;
+  text-align: right;
+}
+
+#get-it-here{
+  opacity: 0;
+  transition: 0.35s 3600s;
+}
+
+#advantages{
+  position: absolute;
+  top: 20em;
+  transition-delay: 3600s;
+}
+
+h2{
+  margin-top: 10%;
+  opacity: 1;
+  transform-origin: left;
+  width: 100%;
+  padding: 1%;
+  padding-left: 7%;
+  transition-delay: 3600s;
+}
+
+.advantages{
+  width: 35%;
+  margin-left: 10%;
+  opacity: 1;
+  transition-delay: 3600s;
+}
+
+.advantages span{
+  font-weight: bold;
+}
+
+footer{
+  position: absolute;
+  bottom: 0em;
+  height: 7%;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 2%;
+  z-index: 70;
+}
+
+footer p{
+  margin: 0%;
+}
+
+footer a{
+  color: #000 !important;
+}
+
+#start-mode, 
+#plus{
+  position: absolute;
+  opacity: 1;
+  top: 0%;
+  margin-top: 28%;
+  left: 56%;
+  width: 35%;
+  height: 2em;
+  border-radius: 7em 0em 0em 0em;
+  transform: skew(-12deg);
+  box-shadow: 0 0 0 0.1em #000, inset 0 0 0 0.04em rgb(255, 255, 255);
+  font-size: 3.5em;
+  line-height: 1.75em;
+  transition-delay: 3600s;
+}
+
+#plus{
+  opacity: 0;
+}
+
+#level-two-txt, .level-three-txt{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  font-size: 1.5em;
+  margin-top: 15em;
+  font-weight: bold;
+  opacity: 0;
+  transition-delay: 3600s;
+}
+
+/*button start mode*/
+/*each button have to be placed exactely as its visible skin*/
+#start{
+  position: absolute;
+  top: 0%;
+  margin-top: 28%;
+  left: 56%;
+  width: 35%;
+  height: 2em;
+  border-radius: 7em 0em 0em 0em;
+  transform: skew(-12deg);
+  font-size: 3.5em;
+  line-height: 1.75em;
+  z-index: 1;
+}
+
+/*activating and validating the button start*/
+#start:active~#start-validator,
+#start-validator:hover{
+  width: 100%;
+  height: 3000px;
+  z-index: 2;
+  transition: 0s 0s;
+}
+
+/*mode two button start clicked*/
+/*the start validator being hovered it modifys the css of others elements*/
+#start-validator:hover~#advantages{
+	margin-top: 14.5em;
+	transition: 0.35s 0s;
+}
+
+#start-validator:hover~#advantages .advantages{
+  width: 91%;
+  margin-left: 7%;
+  transition: 0.35s 0s;
+}
+
+#start-validator:hover~#start-mode,
+#level-four-box{
+  margin-top: 10%;
+  left: 3.5%;
+  width: 93%;
+  height: 4em;
+  font-size: 7em;
+  border-radius: 1em 1em 1em 1em;
+  transition: 0.35s 0.35s;
+}
+
+#start-validator:hover~#start-mode{
+  transform: skew(-0deg);
+}
+
+#level-four-box{
+  transform: skew(-7deg);
+}
+
+#start-validator:hover~#start-mode{
+  color: rgba(0,0,0,0);
+}
+
+#start-validator:hover~h1{
+  width: 100%;
+  margin-top: 0%;
+  margin-left: 0%;
+  transition: 0.35s 0.35s;
+}
+
+#start-validator:hover~h1 span{
+  font-size: 1em;
+  transition: 0.35s 0.35s;
+}
+
+#start-validator:hover~.signature{
+  width: 100%;
+  top: 3em;
+  margin-left: -1%;
+  margin-top: -0.7em;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 1%;
+  padding-left: 4%;
+  transition: 0.35s 0.35s;
+}
+
+#start-validator:hover~#signature{
+  top: 5em;
+}
+
+#start-validator:hover~#signature span{
+  transition: 0.35s 0.35s;
+}
+
+#start-validator:hover~#level-two-txt{
+  opacity: 1;
+  transition: 0.21s 0.7s;
+}
+
+#start-validator:hover~#plus{
+  opacity: 1;
+  width: 21%;
+  font-size: 1.5em;
+  box-shadow: 0 0 0 0.2em #000;
+  margin-top: 42%;
+  left: 70%;
+  transition: 0.35s 0.35s;
+}
+
+/*button to level two*/
+#level-two{
+  position: absolute;
+  width: 21%;
+  font-size: 1.5em;
+  box-shadow: 0 0 0 0.2em #000;
+  margin-top: 42%;
+  left: 70%;
+  top: 0%;
+  height: 2em;
+  border-radius: 7em 0em 0em 0em;
+  transform: skew(-12deg);
+  line-height: 1.75em;
+}
+
+/*when the start button is clicked it unlocks the level two button which was far back in the z index rank at first*/
+#start-validator:hover~#level-two{
+  z-index: 3;
+  transition-delay: 0.7s;
+}
+
+#level-two:hover{
+  z-index: 3;
+  transition-delay: 0s;
+}
+
+/*clicking on level two button*/
+#level-two:active~#level-two-validator, 
+#level-two-validator:hover{
+  width: 100%;
+  height: 3000px;
+  z-index: 3;
+  transition: 0s 0s;
+}
+
+#level-two-validator:hover~#level-two-txt{
+  opacity: 0.01;
+  transition: 0.21s 0s;
+}
+
+#level-two-validator:hover~#level-three-intro{
+  opacity: 1;
+  transition: 0.21s 0s;
+}
+
+#level-three-intro br{
+  display: none;
+}
+
+/*level two button opens the acces to level three and new buttons*/
+.level-three-btn,
+.level-three{
+  position: absolute;
+  top: 0%;
+  margin-top: 28%;
+  width: 12em;
+  height: 2em;
+  box-shadow: 0 0 0 0.1em #000;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 2em;
+  padding: 0.5em 0em 0.5em 0em;
+  opacity: 0;
+  transition: 0s 3600s;
+}
+
+.level-three-btn{
+  height: 3em;
+}
+
+#color-mode-btn,
+#color-mode{
+  margin-left: 8%;
+}
+
+#color-mode{
+  line-height: 1.7em;
+}
+
+#launch-btn,
+#launch{
+  margin-left: 50%;
+  left: -6em;
+}
+
+#slide-btn,
+#slide{
+  margin-left: 92%;
+  left: -12em;
+}
+
+#level-two-validator:hover~.level-three{
+  opacity: 1;
+}
+
+#level-two-validator:hover~#color-mode{
+  transition: 0.7s 0.21s;
+}
+
+#level-two-validator:hover~#launch{
+  transition: 0.7s 0.42s;
+}
+
+#level-two-validator:hover~#slide{
+  transition: 0.7s 0.63s;
+}
+
+#level-two-validator:hover~.level-three-btn{
+  z-index: 4;
+  transition-delay: 1s;
+}
+
+.level-three-btn:hover{
+  z-index: 4;
+  transition: 0s 0s;
+}
+
+#level-two-validator:hover~#plus{
+  opacity: 0.01;
+  transition: 0.35s 0s;
+}
+
+/*activating and validating each level three button*/
+/*here the flash validate animation is used to keep the acces to every buttons once one of them is clicked*/
+#color-mode-btn:active~#color-mode-validator, 
+#color-mode-validator:hover,
+#launch-btn:active~#launch-validator, 
+#launch-validator:hover,
+#open-nb-btn:active~#slide-validator ,
+#slide-validator:hover{
+  z-index: 5;
+  transition: 0s 0s;
+  animation-name: flash-validate;
+  animation-duration: 0.35s;
+}
+
+/*button to launch an animation*/
+#launch-btn:active~#launch-validator, 
+#launch-validator:hover{
+  animation-duration: 1s;
+}
+
+#level-three-txt-three{
+  margin-top: 16em;
+}
+
+#launch-validator:hover~#level-three-txt-three{
+  opacity: 1;
+  transition: 0.21s 0.14s;
+}
+
+#launch-validator:hover~#launch{
+  animation-name: block-move;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+}
+
+@keyframes block-move{
+  0%{}
+  3%{ color: rgba(0,0,0,0);}
+  20%{ margin-left: 8%; left: 12.2em; width: 12em; padding: 0.5em 0em 0.5em 0em;}
+  30%{ margin-left: 8%; left: 12.2em; width: 2em; padding: 0.5em 0.5em 0.5em 0.5em;}
+  45%{ margin-left: 92%; left: -24em; width: 12em; padding: 0.5em 0em 0.5em 0em;}
+  55%{ width: 2em; padding: 0.5em 0.5em 0.5em 0.5em; left: -15.2em}
+  95%{ color: rgba(0,0,0,0);}
+  100%{ left: -6em; width: 12em; padding: 0.5em 0em 0.5em 0em; color: rgba(0,0,0,1);}
+}
+
+#launch-validator:hover~#color-mode,
+#launch-validator:hover~#slide{
+  animation-name: shaker;
+  animation-duration: 0.3s;
+  animation-delay: 0.2s;
+  animation-timing-function: linear;
+}
+
+#launch-validator:hover~#slide{
+  animation-delay: 0.45s;
+}
+
+@keyframes shaker{
+  0%{box-shadow: 0 0 0 0.1em #000;}
+  10%{box-shadow: 0 0 0 0.3em #000; box-shadow: inset 0 0 0 0.1em #fff;}
+  20%{box-shadow: 0 0 0 0.1em #000;}
+  30%{box-shadow: 0 0 0 0.3em #000; box-shadow: inset 0 0 0 0.1em #fff;}
+  40%{box-shadow: 0 0 0 0.1em #000;}
+  50%{box-shadow: 0 0 0 0.3em #000; box-shadow: inset 0 0 0 0.1em #fff;}
+  100%{box-shadow: 0 0 0 0.1em #000;}
+}
+
+/*button to slide to level four*/
+#slide-btn:active~#slide-validator, 
+#slide-validator:hover{
+  width: 100%;
+  height: 3000px;
+  z-index: 7;
+  transition: 0s 0s;
+}
+
+/*level four box*/
+#level-four-box{
+  position: absolute;
+  top: 0%;
+  margin-left: 100%;
+  box-shadow: 0 0 0 0.05em rgb(255,255,255), 0 0 0 0.25em #000;
+  font-size: 3.5em;
+  height: 8em;
+  border-radius: 2em;
+  line-height: 1.75em;
+  transition: 0.35s 3600s;
+}
+
+#level-four-box h3, 
+#level-four-box .label, 
+#level-four-box p{
+  font-size: 0.5em;
+  line-height: 1em;
+  width: 90%;
+  margin-left: 5%;
+}
+
+#level-four-box h3{
+  font-size: 0.7em;
+  margin-top: 0.2%;
+  width: 100%;
+  margin-left: 7%;
+  border-radius: 2em;
+  transition: 0.35s 3600s;
+}
+
+#level-four-box .label{
+  margin-top: -2%;
+  margin-bottom: 2%;
+  text-align: center;
+}
+
+#level-four-box h4{
+  position: absolute;
+  font-size: 0.3em;
+  line-height: 1em;
+  margin-top: 4%;
+  margin-bottom: 1%;
+  width: 30%;
+}
+
+#level-four-box p{
+  margin-bottom: -3%;
+}
+
+#level-four-box p span{
+  font-weight: bold;
+  transition: 0.35s 3600s;
+}
+
+#this-pack{
+  width: 95% !important;
+  margin-left: 0% !important;
+  padding-left: 5%;
+  transition: 0.35s 3600s;
+}
+
+#this-pack span{
+ font-size: 1.2em; 
+}
+
+#guarantee{
+  margin-top: 12.5% !important;
+  margin-bottom: 7.5% !important;
+  font-size: 0.7em !important;
+  font-weight: bold;
+  width: 90% !important;
+  margin-left: 5% !important;
+  border-radius: 1em;
+  padding-bottom: 0.15em;
+  background-color: rgb(255,255,255);
+}
+
+#guarantee span{
+  transition: 0s 3600s;
+}
+
+#guarantee br{
+  display: none;
+}
+
+#invitation{
+  opacity: 0;
+  text-align: right !important;
+  width: 97% ! important;
+  z-index: 1;
+  transition: 0.35s 3600s;
+}
+
+#invitation span{
+  font-size: 0.7em !important;
+  color: rgb(255,127,0);
+}
+
+.pack{
+  position: absolute;
+}
+
+#the-button, 
+#the-button-skin{
+  width: 17% !important;
+  height: 1em;
+  padding: 1em;
+  box-shadow: 0 0 0 0.1em #000, inset 0 0 0 0.05em rgb(255,221,188);
+  border-radius: 3em;
+  text-align: center;
+  margin-left: 7% !important;
+  margin-top: 3.5em !important;
+  overflow: hidden;
+  background-color: rgba(255,255,255,0.7);
+  transition: 0.35s 3600s;
+}
+
+#the-button span,
+#the-button-skin span{
+  display: inline-block;
+  color: #000;
+  transition: 0.35s 3600s;
+}
+
+#the-button span{
+  background-color: rgb(255,255,255);
+  border-radius: 0em 1em 1em 0em;
+  padding-right: 0.5em;
+  line-height: 1;
+}
+
+#the-button span:first-child{
+  border-radius: 1em 0em 0em 1em;
+  padding-left: 0.5em;
+  padding-right: 0em;
+}
+
+#the-button-skin{
+  background: linear-gradient(70deg, rgb(63,219,255) 7%, rgb(255,255,255) 7%, rgb(255,255,255) 10%, rgb(63,219,255) 10%, rgb(63,219,255) 35%, rgb(188,241,253) 35%, rgb(188,241,253) 42%, rgb(255,255,255) 42%, rgb(255,255,255) 56%, rgb(63,219,255) 56%, rgb(63,219,255) 70%, rgb(188,241,253) 70%, rgb(188,241,253) 75%, rgb(255,255,255) 75%, rgb(255,255,255) 84%, rgb(63,219,255) 84%, rgb(63,219,255) 92%, rgb(188,241,253) 92%);
+  opacity: 0;
+}
+
+.button-deco{
+  position: absolute;
+  display: block;
+  width: 10%;
+  height: 100%;
+  left: 0%;
+  background-color: rgb(63,219,255);
+  transform: skew(-7deg);
+  top: 0%;
+}
+
+#button-codes{
+  position: absolute;
+  width: 17% !important;
+  height: 1em;
+  padding: 1em;
+  text-align: center;
+  margin-left: 7% !important;
+  margin-top: 12% !important;
+  transition: 0.35s 3600s;
+}
+
+#back-tip-one{
+  left: -0.5em;
+  margin-top: 2.5em !important;
+}
+
+#back-tip-two{
+  left: 0em;
+  margin-top: 3em !important;
+}
+
+.tips{
+  box-shadow: 0 0 0 0.05em #000;
+  border-radius: 0.5em;
+  background-color: rgb(255,255,255);
+  padding: 1em;
+  width: 12% !important;
+  height: 4em;
+  margin-left: 44% !important;
+  margin-top: 2em !important;
+  text-align: center;
+  left: -1em;
+  transition: 0.35s 3600s;
+}
+
+.tips span{
+  background-color: rgb(255,255,255);
+  display: inline-block;
+  width: 100%;
+  line-height: 1.2em;
+}
+
+#tips-deco{
+  position: absolute;
+  display: block;
+  width: 90%;
+  height: 87%;
+  top: -0.2em;
+  left: -0.2em;
+  border-radius: 0.3em;
+  border: 0.2em solid rgb(255,255,255);
+  margin-left: 5%;
+  margin-top: 5%;
+  background-color: rgba(255,255,255,0);
+}
+
+#dev-tool{
+	width: 21% !important;
+	margin-left: 74% !important;
+	margin-top: 3em !important;
+	background-color: rgba(255,255,255,0.3);
+	border-radius: 1em;
+	padding: 0.5em;
+	padding-bottom: 1em;
+	padding-left: 1em;
+	transition: 0s 3600s;
+}
+
+#dev-tool p span{
+  font-size: 1.2em;
+}
+
+#special-tool{
+  position: absolute;
+  display: block;
+  width: 0.5em;
+  height: 0.5em;
+  background-color: chartreuse;
+  margin-left: 78%;
+}
+
+#tool{
+  position: absolute;
+  top: 0em;
+  margin-top: 1em;
+  font-size: 3em !important;
+  margin-left: 75% !important;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+#point-one{
+  margin-left: 5%;
+}
+
+#point-two{
+  margin-left: 35%;
+}
+
+#point-three{
+  margin-left: 70%;
+}
+
+#download{
+  position: absolute;
+  width: 15%;
+  height: 2em;
+  font-size: 1.5em;
+  color: #000;
+  text-align: center;
+  padding-top: 0.5em;
+  font-weight: bold;
+  box-shadow: 0 0 0 0.1em #000;
+  z-index: 70;
+  margin-top: 38%;
+  margin-left: 42.5%;
+  border-radius: 1.5em;
+  background-color: rgb(255,255,255);
+  border: none;
+  cursor: pointer;
+  transform: scale(0);
+  background: linear-gradient(70deg, rgba(255,255,255,0.7) 7%, rgb(255,255,255) 7%, rgb(255,255,255) 10%, rgba(255,255,255,0.7) 10%, rgba(255,255,255,0.7) 35%, rgba(255,255,255,0.5) 35%, rgba(255,255,255,0.5) 42%, rgb(255,255,255) 42%, rgb(255,255,255) 56%, rgba(255,255,255,0.7) 56%, rgba(255,255,255,0.7) 70%, rgba(255,255,255,0.5) 70%, rgba(255,255,255,0.5) 75%, rgb(255,255,255) 75%, rgb(255,255,255) 84%, rgba(255,255,255,0.7) 84%, rgba(255,255,255,0.7) 92%, rgba(255,255,255,0.5) 92%);
+  background-color: rgb(188,241,243);
+  color: rgb(255,127,0);
+  transition: 0.35s 3600s, box-shadow 0.35s 0s;
+}
+
+#download:hover{
+  box-shadow: 0 0 0 0.1em #000, 0 0 0 0.2em rgb(255,255,255);
+  transition: 0.14s;
+}
+
+#download span{
+  background-color: rgb(255,255,255);
+  border-radius: 1em;
+  padding-bottom: 4%;
+  padding-left: 7%;
+  padding-right: 7%;
+}
+
+#slide-validator:hover~h1{
+  margin-top: 1%;
+  transition: 0.35s 0.35s;
+}
+
+#slide-validator:hover~.signature{
+  top: 4.02em;
+  margin-top: 0em;
+  font-size: 1.2em;
+  transition: 0.35s 0.7s;
+}
+
+#slide-validator:hover~div #invitation{
+  opacity: 1;
+  transition: 0s 1.05s;
+  animation-name: appear;
+  animation-duration: 0.7s;
+  animation-delay: 0.35s;
+  z-index: 7;
+  transition-delay: z-index 1.05s;
+}
+
+@keyframes appear{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+#slide-validator:hover~#signature{
+  top: 35em;
+  width: 99%;
+  margin-left: 0% !important;
+  padding: 1.2em;
+  padding-left: 0em !important;
+  padding-right: 2em;
+  transition: 0s 0.7s;
+  animation-name: teleport;
+  animation-delay: 0.35s;
+  animation-duration: 0.7s;
+}
+
+@keyframes teleport{
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+#slide-validator:hover~#signature #get-it-here{
+  opacity: 1;
+  transition: 0.21s 0.35s;
+}
+
+#slide-validator:hover~#start-mode{
+  margin-left: -100%;
+  transform: skew(-7deg);
+  transition: 0.35s 0s;
+}
+
+#slide-validator:hover~.level-three-txt{
+  margin-left: -100%;
+  transition: 0.35s 0s;
+}
+
+#slide-validator:hover~#color-mode{
+  margin-left: -92%;
+  transition: 0.35s 0s;
+}
+
+#slide-validator:hover~#launch{
+  margin-left: -50%;
+  transition: 0.35s 0s;
+}
+
+#slide-validator:hover~#slide{
+  margin-left: -8%;
+  transition: 0.35s 0s;
+}
+
+#slide-validator:hover~#level-four-box{
+  margin-left: 0%;
+  transform: skew(0deg);
+  transition: 0.7s 0s, transform 0.35s 0.56s;
+}
+
+#slide-validator:hover~#page-background{
+  margin-left: 0%;
+  transition: 0.14s 0s;
+}
+
+#slide-validator:hover~#download{
+  transform: scale(1);
+  transition: 0.21s 0.49s;
+}
+
+#slide-validator:hover~#slide-validator-blocker,
+#slide-validator-blocker:hover{
+  width: 100%;
+  height: 3000px;
+  z-index: 7;
+  transition: 0s 1.07s;
+}
+
+#slide-validator-blocker:hover{
+  transition: 0s 0s;
+}
+
+/*color mode is placed after everything else to impact all the elements*/
+#color-mode-btn:active~#color-mode-validator, 
+#color-mode-validator:hover{
+  animation-duration: 0.5s;
+}
+
+#color-mode-validator:hover~#page-background{
+  opacity: 1;
+  transition: 0s 0s;
+}
+
+#color-mode-validator:hover~#level-three-intro{
+  margin-top: 14em;
+  transition: 0.14s 0s;
+}
+
+#color-mode-validator:hover~#level-three-txt-two{
+  opacity: 1;
+  transition: 0.21s 0.14s;
+}
+
+#color-mode-validator:hover~h1{
+  color: rgb(63,219,255);
+  transition: 0.35s 0s;
+}
+
+#color-mode-validator:hover~h1 span{
+  color: rgb(255,127,0);
+  transition: 0.35s 0s;
+}
+
+#color-mode-validator:hover~.signature{
+  color: rgb(1,7,34);
+  transition: 0.35s 0s;
+}
+
+#color-mode-validator:hover~#signature span{
+  color: rgb(255,127,0);
+  opacity: 0;
+  transition: 0.35s 0s;
+}
+
+#color-mode-validator:hover~#start-mode,
+#color-mode-validator:hover~#level-four-box{
+  background-color: rgb(255, 127, 0);
+  transition: 0.35s 0s;
+}
+
+#color-mode-validator:hover~#level-three-txt-two,
+#color-mode-validator:hover~#level-three-txt-three{
+  color: rgb(255,221,188);
+  transition: 0.35s 0s;
+}
+
+#color-mode-validator:hover~.level-three{
+  background-color: rgb(255,156,57);
+  color: rgb(1,7,34);
+  transition: 0.35s 0s;
+}
+
+#color-mode-validator:hover~#level-four-box #possibilities{
+  color: rgb(255,221,188);
+  transition: 0s 0s;
+}
+
+#color-mode-validator:hover~#level-four-box #invitation{
+  color: rgb(3,207,255);
+  transition: 0.35s 0s;
+}
+
+#color-mode-validator:hover~#level-four-box #this-pack{
+  background-color: rgb(255,156,57);
+  transition: 0s 0s;
+}
+
+#color-mode-validator:hover~#level-four-box #this-pack span{
+  color: rgb(255,221,188);
+  transition: 0s 0s;
+}
+
+#color-mode-validator:hover~#level-four-box #the-button-skin{
+  opacity: 1;
+  transition: 0s 0s;
+}
+
+#color-mode-validator:hover~#level-four-box .tips{
+  background-color: #c6f4ff;
+  transition: 0s 0s;
+}
+
+#color-mode-validator:hover~#level-four-box .tips span{
+  color: rgb(255,127,0);
+  transition: 0s 0s;
+}
+
+#color-mode-validator:hover~#level-four-box #back-tip-one,
+#color-mode-validator:hover~#level-four-box #back-tip-two{
+  background-color: #80bac7;
+  transition: 0s 0s;
+}
+
+#color-mode-validator:hover~#level-four-box #the-button span{
+  color: rgb(255,127,0) !important;
+  transition: 0s 0s;
+}
+
+#color-mode-validator:hover~#level-four-box #button-codes{
+  color: rgb(255,221,188) !important;
+  transition: 0s 0s;
+}
+
+#color-mode-validator:hover~#level-four-box #dev-tool{
+  box-shadow: 0 0 0 0.05em #fff, 0 0 0 0.12em rgb(188,241,253), 0 0 0 0.17em #fff, 0 0 0 0.7em rgba(255,255,255,0.3);
+  transition: 0s 0s;
+}
+
+#color-mode-validator:hover~#level-four-box #guarantee{
+  box-shadow: 0 0 0 0.1em rgba(255, 221, 188, 0.7);
+  transition: 0s 0s;
+}
+
+#color-mode-validator:hover~#level-four-box #guarantee span{
+  color: rgb(255,127,0) !important;
+  transition: 0s 0s;
+}
+
+/*____________________________*/
+
+/*developper mode_____________________*/
+/*on off buttons developper mode*/
+#dev-mode, 
+#dev-mode-off{
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  height: 1em;
+  width: 1em;
+  transition-delay: 3600s;
+}
+
+#dev-mode:hover, 
+#dev-mode-off:hover{
+  cursor: pointer;
+}
+
+#dev-mode{
+  z-index: 70000000000;
+  cursor: pointer;
+  background-color: chartreuse;
+}
+
+#dev-mode-off{
+  z-index: 700000000;
+  background-color: orange;
+}
+
+#dev-mode:active~#dev-mode-off{
+  z-index: 70000000000;
+  transition: 0s 0s;
+}
+
+#dev-mode-off:active{
+  z-index: 70000000;
+  transition: 0s 0s;
+}
+
+/*making the activators and validators visibles*/
+#dev-mode:active~.activator, 
+#dev-mode:active~.validator{
+  opacity: 0.35;
+  transition: 0.07s 0s;
+}
+
+/*making the activators and validators invisibles*/
+#dev-mode-off:active~.activator,
+#dev-mode-off:active~.validator{
+  opacity: 0.00000001 !important;
+  transition-delay: 0s !important;
+}
+
+/*colors to the activators and validators*/
+.activator{
+  background-color: chartreuse;
+}
+
+.validator{
+  background-color: orange;
+}
+
+.activator:hover, 
+.validator:hover{
+  outline: 1em dotted magenta;
+  transition: 0.21s;
+  transition-delay: 0s !important;
+}
+
+/*_________________________________________________*/
+
+/*desktop responsive view*/
+@media screen and (max-width : 1280px){
+  #general{
+    height: 1400px;
+  }
+  .signature{
+    top: 8em;
+  }
+  #signature{
+    margin-top: 5em;
+  }
+  #start, #start-mode{
+    margin-top: 42%;
+  }
+  #advantages{
+    top: 35em;
+  }
+  #start-validator:hover~h1 span{
+    font-size: 1.5em;
+  }
+  #start-validator:hover~.signature{
+    top: 10em;
+  }
+  #start-validator:hover~#signature{
+    top: 12em;
+  }
+  #start-validator:hover~#start-mode,#level-four-box{
+    margin-top: 28%;
+  }
+  #start-validator:hover~#advantages{
+    margin-top: 14em;
+  }
+  #start-validator:hover~#plus, #level-two{
+    width: 28%
+  }
+  #start-validator:hover~#plus, #level-two{
+    margin-top: 70%;
+  }
+  #level-two-txt,.level-three-txt{
+    top: 8em;
+  }
+  .level-three-btn, .level-three {
+    top: 21%;
+  }
+  #slide-validator:hover~.signature{
+    top: 10em;
+  }
+  
+  #slide-validator:hover~#signature{
+    top: 48em;
+  }
+  #level-four-box h3{
+    margin-top: -11%;
+    text-align: left;
+    width: 49%;
+    margin-left: 0.5%;
+  }
+  #possibilities{
+    width: 100% !important;
+    margin-left: 1% !important;
+    margin-bottom: -1% !important;
+  }
+  #this-pack{
+    margin-top: 7%;
+    width: 84% !important;
+    margin-left: 8% !important;
+    padding-left: 0%;
+    text-align: center;
+    margin-bottom: -4% !important;
+  }
+  #level-four-box h4{
+    margin-top: 7%;
+  }
+  #the-button,
+  #the-button-skin{
+    margin-top: 5.5em !important;
+    width: 21% !important;
+  }
+  #button-codes{
+    margin-top: 8em !important;
+  }
+  .tips{
+    margin-top: 4em !important;
+    width: 14% !important;
+    margin-left: 43% !important;
+  }
+  #back-tip-one{
+    margin-top: 4.5em !important;
+  }
+  #back-tip-two{
+    margin-top: 5em !important;
+  }
+  #guarantee{
+    margin-top: 21% !important;
+    margin-bottom: 7% !important;
+  }
+  #dev-tool{
+    margin-top: 5.5em !important;
+    margin-left: 72% !important;
+  }
+  #tool{
+    margin-top: 0.92em;
+  }
+  #page-background{
+    top: 7%;
+  }
+  #download{
+    margin-top: 62.5%;
+    height: 1.7em;
+  }
+  #color-mode-validator:hover~div #possibilities{
+    color: #000 !important;
+    transition: 0s 0s;
+  }
+  #slide-validator:hover~#signature{
+    top: 45em;
+  }
+}
+
+@media screen and (max-width : 1024px){
+  #general{
+    height: 1200px;
+  }
+  #start-validator:hover~#advantages{
+    margin-top: 0em;
+  }
+  #start, #start-mode{
+    margin-top: 49%;
+  }
+  #start-validator:hover~h1{
+    font-size: 2em;
+  }
+  #start-validator:hover~h1 span{
+    font-size: 1em;
+  }
+  #start-validator:hover~.signature{
+    top: 3em;
+  }
+  #start-validator:hover~#signature{
+    top: 4em;
+  }
+  #start-validator:hover~#start-mode, #level-four-box{
+    margin-top: 15%;
+  }
+  #level-two-txt, .level-three-txt{
+    top: -0.5em;
+  }
+  #start-validator:hover~#plus, #level-two{
+    margin-top: 63%;
+  }
+  #level-three-intro br{ 
+    display: block;
+  }
+  .level-three-btn, .level-three{
+    margin-top: 12em;
+    font-size: 1.2em;
+  }
+  #level-three-txt-two{
+    margin-top: 17em;
+  }
+  #level-three-txt-three{
+    margin-top: 19em;
+  }
+  #slide-validator:hover~.signature{
+    top: 2em;
+  }
+  #slide-validator:hover~#signature{
+    top: 34em;
+  }
+  #slide-validator:hover~#advantages{
+    margin-top: 3em;
+    transition: 0.35s 0.35s;
+  }
+  #level-four-box h3{ 
+    margin-top: -7%;
+    width: 100%;
+    text-align: center;
+  }
+  #level-four-box .label{
+    margin-top: 2.5em;
+    font-size: 0.35em;
+  }
+  #this-pack{
+    margin-top: 7%;
+    margin-bottom: -5% !important;
+    font-size: 0.45em !important;
+    width: 98% !important;
+    margin-left: 0% !important;
+    padding-left: 2% !important;
+  }
+  #this-pack span{
+    font-size: 1em !important;
+  }
+  #level-four-box h4{
+    margin-top: 7%;
+  }
+  #the-button,
+  #the-button-skin{
+    margin-top: 4em !important;
+    width: 28% !important;
+    margin-left: 3.5% !important;
+  }
+  #button-codes{
+    width: 28% !important;
+    padding-top: 0.5em;
+    padding-left: 1em;
+    margin-left: 3.5% !important;
+    margin-top: 7em !important;
+  }
+  .tips{
+    font-size: 0.4em !important;
+    padding: 2em;
+    margin-top: 2.5em !important;
+  }
+  .tips br{
+    display: none;
+  }
+  #back-tip-one{
+    margin-top: 3em !important;
+  }
+  #back-tip-two{
+    margin-top: 3.5em !important;
+  }
+  #dev-tool{
+  margin-top: 4.5em !important;
+  margin-left: 70% !important;
+  font-size: 0.4em !important;
+  }
+  #tool{
+    margin-top: 0.95em;
+  }
+  #guarantee{
+    margin-top: 7em !important;
+    font-size: 0.5em !important;
+    width: 80% !important;
+    margin-left: 10% !important;
+  }
+  #guarantee br{
+  display: block;
+  }
+  #page-background{
+    top: 0%;
+  }
+  #color-mode-validator:hover~div #possibilities{
+    color: rgb(255,221,188) !important;
+    transition: 0s 0s;
+  }
+  #download{
+    width: 25%;
+    margin-left: 37.5%;
+    margin-top: 58%;
+    
+  }
+}
