@@ -1,0 +1,72 @@
+/*developper mode_____________________*/
+
+/*html elements in "dev-tool-for-the-pure-css-three-clic-button.html"*/ 
+/*relate this stylesheet to your site when developping to use the tool*/
+/*it will appear at the top right of your viewport as a small green square you can click on to see the mechanics of the button*/
+
+/*on off buttons developper mode*/
+#dev-mode, 
+#dev-mode-off{
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  height: 1em;
+  width: 1em;
+  transition-delay: 3600s;
+}
+
+#dev-mode:hover, 
+#dev-mode-off:hover{
+  cursor: pointer;
+}
+
+#dev-mode{
+  z-index: 70000000000;
+  cursor: pointer;
+  background-color: chartreuse;
+}
+
+#dev-mode-off{
+  z-index: 700000000;
+  background-color: orange;
+}
+
+#dev-mode:active~#dev-mode-off{
+  z-index: 70000000000;
+  transition: 0s 0s;
+}
+
+#dev-mode-off:active{
+  z-index: 70000000;
+  transition: 0s 0s;
+}
+
+/*making the activators and validators visibles*/
+#dev-mode:active~.activator, 
+#dev-mode:active~.validator{
+  opacity: 0.35;
+  transition: 0.07s 0s;
+}
+
+/*making the activators and validators invisibles*/
+#dev-mode-off:active~.activator,
+#dev-mode-off:active~.validator{
+  opacity: 0.00000001 !important;
+  transition-delay: 0s !important;
+}
+
+/*colors to the activators and validators*/
+.activator{
+  background-color: chartreuse;
+}
+
+.validator{
+  background-color: orange;
+}
+
+.activator:hover, 
+.validator:hover{
+  outline: 1em dotted magenta;
+  transition: 0.21s;
+  transition-delay: 0s !important;
+}
