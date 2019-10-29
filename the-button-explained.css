@@ -1,0 +1,574 @@
+/*_______the pure css3 clic button_______*/
+/*a simple framework to make interactive css websites*/
+/*_________________________________________________*/
+
+/*explainations about pages "code-of-the-pure-css-three-clic-button" html and css*/
+
+/*______________html part______________*/
+/*the button is made with two html block type elements*/
+/*the first is called "activator" and the second "validator"*/
+/**/
+/*to begin create two html elements directely in the main box of your html page*/
+/**/
+/*put the class "activator" on the first element and give it an ID*/
+/**/
+/*put the class "validator" on the second block and give it and ID*/
+/*be sure to place the validator after the activator in the html*/
+/**/
+/*then the elements to transform*/
+/*the html elements to transform on a click have to be placed below the validator in the html*/
+/*you can transform as many elements as you wants on a click*/
+
+/*______________css part______________*/
+/*making the button in three css steps_______*/
+/*button css step one the classes_______*/
+
+.activator{
+  cursor: pointer;
+}
+
+.validator{
+  position: absolute;
+  height: 0px;
+  width: 0%;
+  top: 0%;
+  left: 0%;
+  opacity: 0;
+  z-index: -70000000;
+  transition-delay: 3600s;
+}
+
+/*button css step two the element to click on_______*/
+/*style the activator as you wants with its ID to be a button*/
+/*it will be the clickable element*/
+
+#/*ID of your activator*/{
+  /*rules to style the activator*/
+}
+
+/*button css step three activating and validating the click_______*/
+/*adapt the following code in your css page to make the button able to change styles*/
+
+#/*ID of your activator*/:active~#/*ID of your validator*/, 
+#/*ID of your validator*/:hover{
+  width: 100%;
+  height: 100%;
+  z-index: /*higher than everything else on the page*/;
+  transition: 0s 0s;
+}
+
+/*_______transforming targets elements in two css steps_______*/
+
+/*target step one the first css state_______*/
+/*style the html elements this click will target*/
+/*only special point give them a long transition-delay*/
+/*this will be their first css state and after the button is clicked they will receive new rules*/
+
+/*target step two the second css state_______*/
+/*adapt the following code for each element you wants to transform on this click*/
+
+#/*ID of your validator*/:hover~/*the target*/{
+  /*all the css rules you wants for the new state of the target*/
+  /*specify a transition and transition-delay*/
+  transition:;
+  transition-delay: /*will breack the long transition-delay of first state*/;
+}
+/*and then the button is functionnal*/
+
+/*__________________________________________*/
+/*__________________________________________*/
+
+/*_______complete css test code you can unlock_______*/
+/*the html part must be unlocked in page "the-button-explained.html"*/
+/*works with the element called "#example" placed below in this page*/
+
+/*activator example test you can unlock*/
+
+/*#test{
+  position: absolute;
+  left: 10%;
+  top: 38em;
+  width: 15%;
+  height: 2em;
+  text-align: center;
+} */
+
+/*button activation and validation example test you can unlock*/
+
+/*
+#test:active~#test-validator, 
+#test-validator:hover{
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transition: 0s 0s;
+}
+*/
+
+/*transformation example test you can unlock*/
+
+/*#test-validator:hover~#example{
+  opacity: 1;
+  background-color: orange;
+  transition: 0.35s;
+  transition-delay: 0.35s;
+}*/
+
+/*_________________________________________________*/
+
+/*_______Mechanics of the Pure CSS3 Clic Button_______*/
+
+/*the way it works is simple*/
+/*two HTML elements are combined to create the button*/
+/*one is the activator working by a click*/
+/*the other is a validator to allow smooth transitions*/
+/*each HTML element placed below those ones can be impacted by the button*/
+/**/
+/*to be able to keep the CSS changes after the clic, each targeted html element must have a long transition-delay in its main description*/
+/*more informations about this point later in this page*/
+/**/
+/*________what happens when a clic occurs here_______*/
+/*the clickable element have the class activator*/
+/*under this one in the html comes the element with the class validator*/
+/*when the activator is clicked*/
+/*then the validator is activated*/
+/*once activated the validator covers all the page but is invisible*/
+/*and so it becomes able to discretfully control what is below itself using a hover*/
+/**/
+
+/*_______basic code explained_______*/
+/*first the activator receives the pseudo class :active when clicked*/
+/*so it can control the validator*/
+
+/*
+the-activator:active~the-validator{}
+*/
+
+/*basicly the validator have 0 width 0 height and a low z-index*/
+/*but when activated by clicking the validator covers all the page*/
+
+/*
+the-activator:active~the-validator{
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  transition: 0s 0s;
+}
+*/
+
+/*now the validator covers all the page by its dimensions and z-index so it is available*/
+/*to keep its new css state it will also need to have the sames rules when hovered than during it's activated*/
+
+/*
+  the-validator:hover{
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  transition: 0s 0s;
+}
+*/
+
+/*so activating and validating rules are sames and can be compiled*/
+
+/*
+the-activator:active~the-validator, 
+the-validator:hover{
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  transition: 0s 0s;
+}
+*/
+
+/*______________timing of the button______________*/
+/*the purpose of the transition-delay is to maintain the validator available avoiding it goes back to its first css state*/
+/*then once activated it will be able to control others elements by hover*/
+/*so that's why when the activator takes control on the validator and also when the validator is hovered it needs a transition of 0s 0s to quickly respond to the click*/
+
+/*
+the-activator:active~the-validator, 
+the-validator:hover{
+  transition: 0s 0s;
+}
+*/
+
+/*each element destinated to be controlled by a pure css3 clic button needs a transition-delay in its first state*/
+
+/*______________the z-index______________*/
+/*the activator needs a z-index allowing the user to interact with it*/
+/*so each activator have to be at the top of the z-index rank when available*/
+/*at the opposite the validator starts with a low z-index*/
+/*but during the time it is working its z-index becomes the highest one of the page and covers even the activators*/
+/*like this the validator is the only element which can receive a hover*/
+/**/
+/*it is possible to give each validator a proper transition-delay on its ID to close it automaticly*/
+/*it is also possible to let each validator available as long as described in the class*/
+/*the third way is to use an animation on the validator when activated and hovered*/
+/*the animation is available more below*/
+
+/*_________________________________________________*/
+
+/*_______let's see a first button_______*/
+/*it can be copied and easyly adaptated in your sites*/
+
+/*point one making the activator_______*/
+/*the ID is used to give the proper style of this button*/
+
+#first-button{
+  position: absolute;
+  margin-top: 49em;
+  width: 35%;
+  height: 3.5em;
+  margin-left: 32.5%;
+  box-shadow: 0 0 0 0.5em #000;
+  border-radius: 3.5em 0em 0em 0em;
+  transform: skew(-7deg);
+  text-align: center;
+  z-index: 7;
+}
+
+/*the class takes the general attributes of the buttons*/
+
+.activator{
+  cursor: pointer;
+}
+/*here there is only one rule but for a more complex design you can add others as in the "clic.css" page related to the "index.html" page delivered in this pack*/
+
+/*now the validator_______*/
+/*in its first state this element is the more impossible to see and to interact with as can be*/
+/*a way to do it is this one*/
+
+.validator{
+  position: absolute;
+  height: 0px;
+  width: 0%;
+  top: 0%;
+  opacity: 0;
+  z-index: -70000000;
+  transition-delay: 3600s;
+}
+
+/*note it have a big transition-delay in its first state*/
+/*in the actual case the validator will keep available for one hour after click but here users can't copy texts with their mouse*/
+/**/
+
+/*activating and validating_______*/
+/*make sure the validator will cover all the page by its dimensions and z-index*/
+
+#first-button:active~#first-button-validator, 
+#first-button-validator:hover{
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  transition: 0s 0s;
+}
+
+/*And then you can use the validator's hover to control each html element placed below your complete pure css3 clic button*/
+
+/*but to begin we gives a first css state to the targets_______*/
+
+#example{
+  position: absolute;
+  opacity: 0;
+  width: 70%;
+  height: 42%;
+  margin-left: 15%;
+  top: 0%;
+  margin-top: 15em;
+  box-shadow: 0 0 0 1em #000;
+  border-radius: 7em;
+  border: none;
+  text-align: center;
+  transition-delay: 3600s;
+}
+
+#example p{
+  opacity: 0;
+  font-size: 7em;
+  background-color: #fff;
+  width: 100%;
+  margin-left: 0%;
+  margin-top: 16%;
+  border-radius: 2em;
+  transform: scale(0);
+  transition-delay: 3600s;
+}
+
+#go{
+  position: absolute;
+  font-size: 2em;
+  top: 0em;
+  margin-top: 21em;
+  width: 97%;
+  text-align: right;
+  opacity: 0;
+  transition-delay: 3600s;
+}
+
+/*_______the button's actions_______*/
+
+#first-button-validator:hover~#example, 
+#first-button-validator:hover~#go{
+  opacity: 1;
+  transition: 0.35s 0s;
+}
+
+#first-button-validator:hover~#go{
+  transition: 0.5s 0.35s;
+}
+
+/*targeting inside an element*/
+#first-button-validator:hover~#example p{
+  opacity: 1;
+  transform: scale(1);
+  margin-left: 21%;
+  margin-top: 7%;
+  transition: 0.5s 0.35s;
+}
+/*and then the button works*/
+
+/*following this example now you can use the pure css3 clic button to develop your own interactive website*/
+/*____________________________*/
+
+/*______________tips and tools______________*/
+/*basic tips_______*/
+
+/*_______if this doesn't works_______*/
+/*check at each element's transition and transition-delay*/
+/*take care of the z-index of all of them*/
+/*be sure you targetted correctely the elements to transform*/
+/*__________________________________________*/
+/**/
+/*to keep modifications due to a click each transformed element needs a long transition-delay in its first css state*/
+/**/
+/*every elements have a first css state and also as many others than clicks transformations it can receive*/
+/**/
+/*take care to correctly target each element to transform by a click with "validator:hover~"*/
+/**/
+/*for beautiful and smooth transitions always be sure to use the sames rules for the same effect in each css state of an element like this it will work fine*/
+/*for example ruling first with "%" and in an other state with "EM"  makes an instant transition and not a smooth one just because there are two different rules*/
+/*the conclusion is two states of an element have to correspond together*/
+/**/
+/*use the dedicated pure css3 clic button developper tool to see what happens with ivisibles activators and validators*/
+/**/
+/*when working with your browser's developper tool use the :hover activation on each validator you develops the effects*/
+/**/
+/*remember to disable the long transition-delay when modifiying a css state in your browser*/
+/*_____________________*/
+/*_______limitations_______*/
+/*the buttons just works onto the elements below themselves so to be able to control all the visible things of a page including the buttons as the user can see you will have to make them invisibles over a visible skin as done in the index.html page*/
+/*if you do this be sure to place the invisible buttons with the exact sames rules as their skins for responsive design*/
+/**/
+/*transforming each html block of your page into an activator is possible*/
+/*but be careful if you wants to put a button inside an other element because of the z-index of the validator being influenced by the container around it and will possiblely not be able to cover all the elements of the page nor transforming the elements placed before itself in the html*/
+/*the problem if the validator doesn't covers the page is the transition will stop in case the user's mouse points somewhere else because of :hover*/
+/**/
+/* also :hover doesn't works with touchscreens so the transitions can be done only with the activators on the click but it will not be smooth with this framework*/
+/**/
+/*a few types of css rules as text-align can't keep modifications even with a transition-delay*/
+/**/
+/*some types of modifications don't works when not visibles on the screen as changing a gradient-background*/
+/**/
+/*_______browsers_______*/
+/*chromium-based browsers as chrome opera and in a lower proportion edge all have a bug and needs the page to be reloaded one time to paint correctly the elements on the screen if these have a transition-delay in their first css state*/
+/*you can find informations about it in chromium bugs reports*/
+/*https://bugs.chromium.org/p/chromium/issues/detail?id=332189*/
+/*https://bugs.chromium.org/p/chromium/issues/detail?id=398878*/
+/**/
+/*internet explorer supports well the modifications on :hover but not the click with :active*/
+/*_____________________*/
+
+/*_______the animation to close a validator_______*/
+
+@keyframes flash-validate{
+  0%{
+    width: 100%;
+    height: 100%;
+  }
+  100%{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/*the following rules will be needed in the activating-and-validating step when using the animation*/
+
+/*
+activator:active~validator, 
+validator:hover{
+  animation-name: flash-validate;
+  animation-duration:;
+  z-index:;
+  transition: 0s 0s;
+}
+*/
+
+/*make sure to calculate the animation duration to fit in the timing of your transitions*/
+/*also remember to give the validator a correct z-index when activated and hovered and have a 0s 0s transition even if using the animation*/
+/*and be careful the height and width will correctly cover all your page*/
+/*_____________________*/
+
+/*_______special case*_______/
+/*coming back to the original css state of an element*/
+
+/*each element have a first css state*/
+/*this first state have a transition-delay allowing the element to keep any others states it can receive by a click*/
+/*each new state is controlled by a validator's hover*/
+/**/
+/*even if the validator is not hovered anymore the element keeps its new state on the screen thanks to the transition-delay present in its first state*/
+/*but to the browser once the hover is not anymore then the readen css is immediately the one of the original state even if on the screen the element is now staying in its new css due to the transiton-delay*/
+/**/
+/*making a transition to one state to a similar one have no result of course*/
+/**/
+/*so coming back to an original css state by a clic is not possible with this framework*/
+/*one solution is to give a coming-back state almost similar to the original one but not the exact same*/
+/*this way the browser can find a modification to do*/
+/*on the screen the transformations will occur from the last used state to the coming-back one so visually everything will be allright*/
+/*but to the browser it will be from the original state to the coming-back one and so it will work*/
+/*_________________________________________________*/
+
+/*_______exercice to fully take all of it in hands_______*/
+/*you can make a copy of this page and aslo of "the-button-explained.html" to work on and continue their developmment on your own as experiments places*/
+/**/
+/*before to start read it once fully without trying to necessarly understand everything at first time*/
+/*all the correct code is available below*/
+/*_____________________*/
+
+/*creating a button to close what "#first-button" opened just before*/
+
+/*_______html part_______*/
+/**/
+/*duplicate the complete pure css3 clic button in "the-button-explained.html" and place it below the complete first button*/
+/*remember a complete button is made with the elements having the classes activator and validator*/
+/*so two elements*/
+/*change their IDs by "close-button" and "close-button-validator" for example*/
+/*and keep the classes*/
+/**/
+/*once it's done please come back to this page*/
+/**/
+
+/*_______css part_______*/
+/**/
+/*first giving some rules to the new button*/
+/*we will make it being available only after "#first-button" has been clicked*/
+/**/
+/*you can give it the exact sames rules as "#first-button"*/
+/*except about the z-index which needs to be under "#first-button"*/
+/*also the new button have to be invisible even if not placed below "#first-button"*/
+/*last execption the new button needs a transition-delay to keep its new state when modified*/
+
+#/*the new button*/{
+  /*all the rules you wants*/
+  z-index: ;
+  transition-delay: ;
+}
+
+/*then let's code the behaviour*/
+/*first we wants the new button to become available after "#first-button" has been clicked*/
+/*to do we needs our new activator to receive a second css state*/
+/*so the control to make it will come from "#first-button-validator"*/
+/*formula*/
+/*same type as before when "#first-button-validator:hover" changed the div "#example" and others elements but here applied to the new button and the changes we wants*/
+
+#first-button-validator:hover~#/*the new button*/{
+  z-index: ;
+  transition: ;
+}/*will be compilated with next rule*/
+
+/*be sure to change the z-index to correct one*/
+/*and also remember to have a good timing to don't interfer with anything*/
+/*so to cover the z-index of "#first-button-validator" it must wait until all the others modifications are done on the click*/
+/*what means its transition-delay have to be at least equal to the longest transition of the others elements including their transition delays*/
+/*note if "#first-button-validator" had an initial short transition-delay or if the "validate-flash" animation were used during the activation-validation process it should be different because the new button would not have to cover the validator*/
+/**/
+/*one other point is to make the new button working when it's hovered*/
+/*to do it we just have to give the sames rules to the new button when hovered as when "#first-button-validator" changes it*/
+
+#first-button-validator:hover~#/*the new button*/,
+#/*the new button*/:hover{
+  z-index: ;
+  transition: ;
+}/*compilated two rules*/
+
+/*_______then the new button is fully available_______*/
+
+/*once it's done you can code what will happen when the new button is clicked*/
+/**/
+/*clicking the new button will only have influence ont its appropriate validator*/
+/*so we need to make the validator available and able to keep its new state*/
+/*the formula is the same as when clicking on "#first-button" had an action on "#first-button-validator" except the names of the IDs*/
+
+#/*new-button*/:active~#/*new-button-validator*/,
+#/*new-button-validator*/:hover{
+  width: ;
+  height: ;
+  z-index: ;
+  transition: ;
+}
+
+/*when this is done clicking on the new button makes its validator to cover the page*/
+/*then this new validator can take the control of each element placed below itself as "#first-button-validator" was able to do when hovered*/
+/*this is time to give the div "#example" a new css state looking like the original one but a bit different to finish this special case exercice*/
+/*or style it as you wants just to try*/
+
+#/*new-button-validator*/:hover~#example{
+  opacity:;
+  transition:;
+}
+
+/*end of the exercice*/
+
+/*_______correct code for the exercice_______*/
+/*working only with the html part as described before*/
+
+/*in the html main box_______*/
+/*
+  <button id="close-button" class="activator">Close</button>
+  <div id="close-button-validator" class="validator"></div>
+*/
+
+/*css_______*/
+/*first we give some rules to our new button*/
+#close-button{
+  position: absolute;
+  margin-top: 49em;
+  width: 35%;
+  height: 3.5em;
+  margin-left: 32.5%;
+  box-shadow: 0 0 0 0.5em #000;
+  border-radius: 3.5em 0em 0em 0em;
+  transform: skew(-7deg);
+  text-align: center;
+  z-index: 0;
+  transition-delay: 3600s;
+}
+
+/*then we choose when to make the button available*/
+#first-button-validator:hover~#close-button,
+#close-button:hover{
+  z-index: 7;
+  transition: 0s 1s;
+}
+
+/*time to make our new button functionnal*/
+#close-button:active~#close-button-validator,
+#close-button-validator:hover{
+  width: 100%;
+  height: 3000px;
+  z-index: 7;
+  transition: 0s 0s;
+}
+
+/*and to finish the changes occuring thanks to the button*/
+#close-button-validator:hover~#example{
+  opacity: 0.01;
+  transition: 0.35s 0s;
+}
+
+/*end of the exercice's correct code*/
+
+/*_________________________________________________*/
+
+/*now time to do your own path with the pure css3 clic button*/
+/*css being full of possibilities this framework could be ameliorated maybe by you*/
+/*thanks for your interest and have good*/ /*Jesus-Christ is Saviour, John 3-16*/
